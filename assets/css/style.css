@@ -1814,18 +1814,31 @@ textarea.form-input::-webkit-resizer { display: none; }
 .download-resume-btn {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-top: 10px;
   background: var(--download-button);
   color: var(--light-gray);
   border-radius: 12px;
   transition: background 0.3s, box-shadow 0.3s;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-left: 20px;
+  box-shadow: var(--shadow-2);
+}
+.download-resume-btn-resume {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 20px;
+  margin-top: 5px;
+  background: var(--download-button);
+  color: var(--light-gray);
+  border-radius: 12px;
+  transition: background 0.3s, box-shadow 0.3s;
+  justify-content: center;
+  margin-bottom: 20px;
   box-shadow: var(--shadow-2);
 }
 
-.download-resume-btn img {
+.download-resume-btn-resume img {
   margin-right: 10px;
 }
 
@@ -1833,8 +1846,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 .download-resume-btn ion-icon { --ionicon-stroke-width: 35px;
   margin-right: 10px;
 color: var(--aqua-teal-1) }
+.download-resume-btn-resume ion-icon { --ionicon-stroke-width: 35px;
+  margin-right: 10px;
+color: var(--aqua-teal-1) }
 
 .download-resume-btn:hover {
+  color: var(--name-highlight);
+  /* background: var(--bg-gradient-jet); */
+  background: var(--download-button-hover);
+  color: var(--name-normal);
+
+}
+.download-resume-btn-resume:hover {
   color: var(--name-highlight);
   /* background: var(--bg-gradient-jet); */
   background: var(--download-button-hover);
