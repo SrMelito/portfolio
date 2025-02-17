@@ -1,119 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Esteeven González</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esteeven González | Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="container">
+    <!-- Columna izquierda -->
+    <div class="left-column">
+      <img src="assets/profile.png" alt="Foto de Esteeven González" class="profile-img">
+      <h2>DBA | Database Analyst</h2>
+      <hr>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Stevengon974@gmail.com</p>
+        <p><i class="fas fa-phone"></i> (+57) 304-543-2552</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/steven-gonzalez-274489216/" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
 
-    <!-- Sección de portada -->
-    <section id="hero">
-        <div id="particles-js"></div> <!-- Contenedor de partículas -->
-        <div class="hero-content">
-            <img src="/images/profile.png" alt="Esteeven González" class="profile-image">
-            <h1>Esteeven González</h1>
-            <p>Database Administrator | Database Analyst </p>
-            <a href="#about" class="cta-button">Conoce más sobre mí</a>
-        </div>
-    </section>
-    
-
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Ingeniero en Telemática con más de 3 años de experiencia en análisis y gestión de datos, enfocado en el procesamiento, optimización y visualización de datos. Conocimientos sólidos en administración y mantenimiento de bases de datos relacionales, especializado en PostgreSQL. Experiencia en automatización de procesos usando Python y Shell scripting, desarrollo de ETL y creación de dashboards en Power BI. Habilidades en mejora del rendimiento de bases de datos, garantizando la disponibilidad de datos y optimizando recursos mediante análisis eficiente de datos e implementación de soluciones escalables en entornos Docker y Kubernetes.</p>
-    </section>
-
-    <section id="experience">
-        <h2>Experiencia Laboral</h2>
-        <div class="job">
-            <h3>Database Administrator | Mobiera</h3>
-            <p>April 2023 – Present</p>
-            <ul>
-                <li>Gestión integral de bases de datos PostgreSQL, incluyendo administración, optimización, tuning y estrategias de alta disponibilidad.</li>
-                <li>Implementación de planes de backup, monitoreo y recuperación de datos.</li>
-                <li>Automatización de procesos usando Python y Shell scripting, permitiendo la generación eficiente de reportes y monitoreo de bases de datos a través de jobs programados con crontab.</li>
-                <li>Migración de infraestructura y soporte usando Docker y Kubernetes.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Database Analyst | Alto</h3>
-            <p>February 2022 – March 2023</p>
-            <ul>
-                <li>Desarrollo e implementación de procesos ETL para el procesamiento eficiente de datos en MySQL y SQL Server.</li>
-                <li>Análisis y transformación de grandes volúmenes de datos usando Python.</li>
-                <li>Creación y mantenimiento de dashboards en Power BI para visualización estratégica de datos.</li>
-                <li>Ejecución de pruebas funcionales, de carga y estrés en aplicaciones a gran escala. Documentación técnica de flujos de trabajo y procedimientos.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Educación</h2>
-        <div class="education-item">
-            <h3>Bachelor’s Degree in Telematics Engineering</h3>
-            <p>Universidad Distrital Francisco José de Caldas | April 2022 – December 2024</p>
-        </div>
-        <div class="education-item">
-            <h3>Associate Degree in Data Systematization</h3>
-            <p>Universidad Distrital Francisco José de Caldas | February 2018 – November 2021</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Habilidades</h2>
+    <!-- Columna derecha -->
+    <div class="right-column">
+      <!-- Navbar -->
+      <nav>
         <ul>
-            <li><strong>Bases de datos:</strong> PostgreSQL, MySQL, SQL Server</li>
-            <li><strong>Programación & herramientas:</strong> Python, Power BI, Postman, Visual Studio (ETL)</li>
-            <li><strong>Automatización & contenedores:</strong> Docker, Kubernetes, Linux</li>
-            <li><strong>Control de versiones:</strong> GIT</li>
-            <li><strong>Herramientas de productividad & análisis:</strong> Microsoft Excel</li>
+          <li><a href="#about" class="nav-link active">Sobre mí</a></li>
+          <li><a href="#experience" class="nav-link">Experiencia</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
         </ul>
-    </section>
+      </nav>
 
-    <section id="projects">
+      <!-- Sección Sobre Mí -->
+      <section id="about" class="content-section active">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy un apasionado por la tecnología y los datos, con experiencia en la administración y optimización de bases de datos relacionales como PostgreSQL, MySQL y SQL Server. Mi enfoque se centra en la automatización de procesos, el análisis de datos y la creación de soluciones escalables utilizando herramientas como Docker y Kubernetes.
+        </p>
+        <!-- Carrusel de habilidades -->
+        <div class="skills-carousel">
+          <div class="skill"><i class="fab fa-python"></i> Python</div>
+          <div class="skill"><i class="fas fa-database"></i> PostgreSQL</div>
+          <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+          <div class="skill"><i class="fab fa-aws"></i> AWS</div>
+          <div class="skill"><i class="fab fa-git"></i> Git</div>
+        </div>
+      </section>
+
+      <!-- Sección Experiencia -->
+      <section id="experience" class="content-section">
+        <h2>Experiencia</h2>
+        <div class="experience-item">
+          <h3>Database Administrator | Mobiera</h3>
+          <p>Abril 2023 – Presente</p>
+          <ul>
+            <li>Gestión integral de bases de datos PostgreSQL.</li>
+            <li>Automatización de procesos con Python y Shell scripting.</li>
+            <li>Migración de infraestructura con Docker y Kubernetes.</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Database Analyst | Alto</h3>
+          <p>Febrero 2022 – Marzo 2023</p>
+          <ul>
+            <li>Desarrollo de procesos ETL en MySQL y SQL Server.</li>
+            <li>Creación de dashboards en Power BI.</li>
+            <li>Análisis y transformación de datos con Python.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Sección Proyectos -->
+      <section id="projects" class="content-section">
         <h2>Proyectos</h2>
-        <div class="project">
-            <h3>Optimización de bases de datos PostgreSQL</h3>
-            <p>Implementación de estrategias de tuning y optimización en entornos de producción, mejorando el rendimiento y la disponibilidad de los datos.</p>
+        <div class="project-card">
+          <h3>Automatización de Reportes con Python</h3>
+          <p>Desarrollo de scripts en Python para la generación automática de reportes y monitoreo de bases de datos PostgreSQL.</p>
+          <a href="https://github.com/tu-usuario/proyecto1" target="_blank" class="btn">Ver en GitHub</a>
         </div>
-        <div class="project">
-            <h3>Automatización de ETL con Python</h3>
-            <p>Desarrollo de scripts en Python para la automatización de procesos ETL, reduciendo el tiempo de procesamiento de datos en un 30%.</p>
+        <div class="project-card">
+          <h3>Dashboard de Ventas en Power BI</h3>
+          <p>Creación de un dashboard interactivo para visualizar y analizar datos de ventas.</p>
+          <a href="https://ejemplo.com" target="_blank" class="btn">Ver proyecto</a>
         </div>
-    </section>
+      </section>
 
-    <section id="contact">
+      <!-- Sección Contacto -->
+      <section id="contact" class="content-section">
         <h2>Contacto</h2>
-        <p>Email: <a href="mailto:stevengon974@gmail.com">stevengon974@gmail.com</a></p>
-        <p>Teléfono: (+57) 304-543-2552</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/steven-gonzalez-274489216/" target="_blank">Steven González</a></p>
-    </section>
+        <p>¡No dudes en contactarme!</p>
+        <ul>
+          <li><strong>Teléfono:</strong> (+57) 304-543-2552</li>
+          <li><strong>Email:</strong> <a href="mailto:Stevengon974@gmail.com">Stevengon974@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/steven-gonzalez-274489216/" target="_blank">Steven González</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
 
-    <footer>
-        <p>© 2025 Esteeven González - Todos los derechos reservados</p>
-    </footer>
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2023 Esteeven González. Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="script.js"></script>
-
-    <!-- particles.js CDN -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="/script.js"></script>
-
+  <!-- Script para interactividad -->
+  <script src="script.js"></script>
 </body>
 </html>
