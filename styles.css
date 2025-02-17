@@ -12,24 +12,18 @@ body {
 header {
   background-color: #222;
   color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2em;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 header nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 0;
+  text-align: center;
 }
 
 header nav ul li {
@@ -47,13 +41,11 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Estilos de las secciones */
+/* Estilos de las secciones (about, experience, education, skills, projects, contact) */
 section {
-  padding: 20px;
-  margin: 20px;
+  padding: 60px 20px;
+  margin: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
@@ -62,39 +54,70 @@ section h2 {
   color: #222;
 }
 
-.job, .education-item, .project {
-  margin-bottom: 20px;
-}
-
-.job h3, .education-item h3, .project h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #444;
-}
-
-.job p, .education-item p, .project p {
-  margin: 5px 0;
-  color: #666;
-}
-
-.job ul, .skills ul {
-  list-style-type: disc;
-  margin: 10px 0 0 20px;
-}
-
-.job ul li, .skills ul li {
-  margin-bottom: 5px;
-}
-
 /* Estilos del footer */
 footer {
   text-align: center;
   background: #222;
   color: white;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 20px;
+}
+/* Estilos del fondo de partículas */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Esto asegura que esté detrás del contenido */
+}
+/* Estilos de la sección de portada (hero) */
+#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background-color: #333; /* Fondo oscuro para contraste */
 }
 
-footer p {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+#hero h1 {
+  font-size: 3em;
   margin: 0;
+}
+
+#hero p {
+  font-size: 1.5em;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
 }

@@ -1,55 +1,78 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Portfolio cargado correctamente");
 
-    // Añadir un botón para subir al principio de la página
-    const scrollToTopButton = document.createElement("button");
-    scrollToTopButton.textContent = "↑";
-    scrollToTopButton.style.position = "fixed";
-    scrollToTopButton.style.bottom = "20px";
-    scrollToTopButton.style.right = "20px";
-    scrollToTopButton.style.padding = "10px";
-    scrollToTopButton.style.backgroundColor = "#222";
-    scrollToTopButton.style.color = "white";
-    scrollToTopButton.style.border = "none";
-    scrollToTopButton.style.borderRadius = "50%";
-    scrollToTopButton.style.cursor = "pointer";
-    scrollToTopButton.style.display = "none";
-
-    document.body.appendChild(scrollToTopButton);
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = "block";
-        } else {
-            scrollToTopButton.style.display = "none";
-        }
-    });
-
-    scrollToTopButton.addEventListener("click", function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-
-    // Animación al cargar las secciones
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "translateY(0)";
+    // Verifica si particles.js está inicializando
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false
+                }
             }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    sections.forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = "translateY(20px)";
-        section.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
-        observer.observe(section);
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                }
+            }
+        }
     });
 });
