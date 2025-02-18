@@ -788,6 +788,23 @@ main {
   filter: grayscale(0);
 }
 
+.techstack-item img {
+  width: 60px;  /* Ajusta según el tamaño ideal */
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain; /* Asegura que la imagen se mantenga proporcionada */
+  filter: grayscale(1); /* Efecto en escala de grises */
+  transition: filter 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.techstack-item img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1); /* Efecto ligero de zoom */
+}
+
+
 /* Keyframes for horizontal scrolling */
 @keyframes scroll {
   0% {
@@ -1361,44 +1378,39 @@ textarea.form-input::-webkit-resizer { display: none; }
   .service-item {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
-  }
+    align-items: center;  /* Centra los íconos con el texto */
+    gap: 15px;  /* Separación mejorada */
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
 
-  .service-icon-box {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
+/* Efecto al pasar el mouse */
+.service-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 5px 15px rgba(77, 184, 182, 0.3);
+}
+
+
+.service-icon-box {
+  min-width: 50px;  /* Evita que se reduzca demasiado */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-icon-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* Asegura que los íconos no se deformen */
+}
+
 
   .service-content-box { text-align: left; }
 
-  /* testimonials */
-
-  .testimonials-title { margin-bottom: 25px; }
-
-  .testimonials-list {
-    gap: 30px;
-    margin: 0 -30px;
-    padding: 30px;
-    padding-bottom: 35px;
-  }
-
-  .content-card {
-    padding: 30px;
-    padding-top: 25px;
-  }
-
-
-  .testimonials-item-title {
-    margin-bottom: 10px;
-    margin-left: 95px;
-  }
-
-  .testimonials-text {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-  }
 
   /* techstack */
 
@@ -1821,9 +1833,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 12px;
   transition: background 0.3s, box-shadow 0.3s;
   justify-content: center;
-  margin-left: 20px;
+  /*margin-right: 20px;*/
   box-shadow: var(--shadow-2);
 }
+
+.download-resume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
 .download-resume-btn-resume {
   display: inline-flex;
   align-items: center;
@@ -1836,6 +1857,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   justify-content: center;
   margin-bottom: 20px;
   box-shadow: var(--shadow-2);
+}
+
+.download-resume-btn img {
+  margin-right: 10px;
 }
 
 .download-resume-btn-resume img {

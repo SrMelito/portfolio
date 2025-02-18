@@ -180,3 +180,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+AOS.init({
+  duration: 1000, // Duración en milisegundos
+  easing: "ease-in-out",
+  once: true // Solo se activa una vez
+});
