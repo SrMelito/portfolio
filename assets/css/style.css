@@ -1222,10 +1222,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * techstack
    */
+ 
+  .techstack-item { min-width: calc(33.33% - 10px); margin-top: 40px; margin-bottom: 40px; }
 
-  .techstack-item { min-width: calc(33.33% - 10px); }
+  .download-resume-btn { margin-bottom: 10px;}
 
-
+  .about-text { text-align: justify;}
 
   /**
    * #PORTFOLIO, BLOG
@@ -1233,6 +1235,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-img,
   .blog-banner-box { height: auto; }
+  
+  .service-item { margin-bottom: 10px;}
+
+  .service-item-text {text-align: center;}
+  
+  .service-icon-box img {
+    max-width: 80px; /* Ajusta según necesites */
+  }
 
 }
 
@@ -1327,7 +1337,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info-content .name { margin-bottom: 15px; }
 
-  .info-content .title { padding: 5px 18px; }
+  .info-content .title { padding: 5px 30px; }
 
   .info_more-btn {
     top: -30px;
@@ -1481,10 +1491,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .form-btn ion-icon { font-size: 18px; }
 
 }
-
-
-
-
 
 /**
  * responsive larger than 768px screen
