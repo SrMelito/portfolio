@@ -1217,7 +1217,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 450px) {
+@media (min-width: 410px) {
 
   /**
    * techstack
@@ -1243,6 +1243,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .service-icon-box img {
     max-width: 80px; /* Ajusta según necesites */
   }
+
+  .form-btn{margin-top: 10px;}
 
 }
 
