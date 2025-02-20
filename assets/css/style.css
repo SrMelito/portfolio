@@ -569,9 +569,10 @@ main {
 
 .service-icon-box img { margin: auto; }
 
-.service-content-box { text-align: center; }
+.service-content-box { text-align: left; }
 
 .service-item-title { margin-bottom: 7px; }
+.service-item-title { text-align: left; }
 
 .service-item-text {
   color: var(--light-gray);
@@ -1217,7 +1218,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 410px) {
+@media (min-width: 375px) {
 
   /**
    * techstack
@@ -1239,6 +1240,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .service-item { margin-bottom: 10px;}
 
   .service-item-text {text-align: center;}
+  .service-item-title {text-align: center;}
   
   .service-icon-box img {
     max-width: 80px; /* Ajusta según necesites */
@@ -1422,7 +1424,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   .service-content-box { text-align: left; }
-
+  .service-item-text { text-align: left;}
 
   /* techstack */
 
